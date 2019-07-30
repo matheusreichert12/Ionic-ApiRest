@@ -6,4 +6,32 @@
 
 <ion-content>
 
+  <form (ngSubmit)="createAccount()">
+    <ion-item>
+      <ion-label>Nome:</ion-label>
+      <ion-input type="text" [(ngModel)]="model.nomeusuario" name="nomeusuario"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Telefone:</ion-label>
+      <ion-input stacked [(ngModel)]="model.telefoneusuario" name="telefoneusuario"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Email:</ion-label>
+      <ion-input [(ngModel)]="model.emailusuario" name="emailusuario"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Login:</ion-label>
+      <ion-input [(ngModel)]="model.login" name="login"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Senha:</ion-label>
+      <ion-input [(ngModel)]="model.senha" name="senha"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" block>Salvar</ion-button>
+  </form>
 </ion-content>

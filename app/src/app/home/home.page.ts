@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import {  Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,17 +9,18 @@ import { NavController } from '@ionic/angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: NavController, public router: Router) { }
 
   openCreateAccount() {
-    this.navCtrl.navigateRoot("CreateAccountPage");
+
+    this.router.navigate(['/create-account']);
   }
 
   openLogin() {
-    this.navCtrl.navigateRoot("LoginPage");
+    this.router.navigate(['/login']);
   }
 
   openListUsers() {
-    this.navCtrl.navigateRoot("UserListPage");
+    this.router.navigate(['/user-list']);
   }
 }
